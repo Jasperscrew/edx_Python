@@ -4,14 +4,6 @@ Created on Sun Jun 11 12:22:28 2017
 
 @author: Joe
 """
-
-def round_10(x,base=10):
-    '''
-    Rounds number to the closest base
-    Default base is 10
-    '''
-    return int(base*round(float(x)/base))
-
 def findbalance(balance,annualinterestrate,payment):
     '''
     Finds the remaining balance after 12 months of constant monthly payments
