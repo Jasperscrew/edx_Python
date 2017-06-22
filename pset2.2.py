@@ -1,9 +1,10 @@
 def remainingBal(balance, annualInterestRate, monthlyPayment):
         months_left = 12
         while months_left > 0:
-            months_left -= 1
             monthlyIntRate = annualInterestRate/12
-            balance = (balance - monthlyPayment) + (balance * monthlyIntRate)
+            upb = (balance - monthlyPayment)
+            balance = upb + (upb * monthlyIntRate)
+            months_left -= 1
         return balance
 #
 # balance = 829
