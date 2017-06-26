@@ -9,7 +9,7 @@ def getGuessedWord(secretWord, lettersGuessed):
 # lettersGuessed = input(str('Enter guesses: '))
     guessList = list(lettersGuessed)
     secretList = list(secretWord)
-    wordList = []
+    indexList = []
     output = 'Something went wrong :('
     fillMe = list('_' * len(secretWord))
 
@@ -19,8 +19,8 @@ def getGuessedWord(secretWord, lettersGuessed):
         if proceed == True:
             for i in range(0,len(secretList)):
                 if secretList[i] == testLetter:
-                    wordList.append(i)
-            for i in wordList:
+                    indexList.append(i)
+            for i in indexList:
                 fillMe[i] = testLetter
     output = ''.join(str(i) for i in fillMe)
     return(output)
